@@ -1,0 +1,203 @@
+{
+	"info": {
+		"_postman_id": "04c586a7-b9b6-4f5f-9aca-1f159ba1375e",
+		"name": "URL Short - wget.space",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "wget.space - get user token",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"email\":\"app@test.com\",\"password\":\"123\"}"
+				},
+				"url": {
+					"raw": "http://wget.space/user?",
+					"protocol": "http",
+					"host": [
+						"wget",
+						"space"
+					],
+					"path": [
+						"user"
+					],
+					"query": [
+						{
+							"key": "data",
+							"value": "",
+							"disabled": true
+						},
+						{
+							"key": "",
+							"value": "",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "wget.space - post url",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "token",
+						"type": "text",
+						"value": "9ef3be35aab9c6c45e3eb7b155aa07a8c162e21d104064cd528f1f05135dd17d"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"url\":\"http://www.google.com\",\"name\":\"google\"}"
+				},
+				"url": {
+					"raw": "http://wget.space/urls",
+					"protocol": "http",
+					"host": [
+						"wget",
+						"space"
+					],
+					"path": [
+						"urls"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "wget.space - go to url minify",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://wget.space/MFbL4Vux47fug9o9",
+					"protocol": "http",
+					"host": [
+						"wget",
+						"space"
+					],
+					"path": [
+						"MFbL4Vux47fug9o9"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "wget.space - get details url",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://wget.space/urls/MFbL4Vux47fug9o9",
+					"protocol": "http",
+					"host": [
+						"wget",
+						"space"
+					],
+					"path": [
+						"urls",
+						"MFbL4Vux47fug9o9"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "wget.space - delete url",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "token",
+						"value": "c29ec236141b4b929ef93cb153e0fd9c779a170b64c53e14181cd2748e8d16d2",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "http://wget.space/urls/14",
+					"protocol": "http",
+					"host": [
+						"wget",
+						"space"
+					],
+					"path": [
+						"urls",
+						"14"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "wget.space - update url",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"name": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "token",
+						"value": "c29ec236141b4b929ef93cb153e0fd9c779a170b64c53e14181cd2748e8d16d2",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"url\":\"http:\\/\\/www.bing.com\",\"name\":\"bing\"}"
+				},
+				"url": {
+					"raw": "http://wget.space/urls/MFbL4Vux47fug9o9",
+					"protocol": "http",
+					"host": [
+						"wget",
+						"space"
+					],
+					"path": [
+						"urls",
+						"MFbL4Vux47fug9o9"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
