@@ -2,6 +2,9 @@
 
 use Illuminate\Http\Request;
 
+Route::get('/', function () {
+    return response()->file("../README.md",["text/markdown"]);
+});
 
 Route::get('/{hash}', 'UrlController@go');
 Route::get('/urls/{hash}', 'UrlController@detail');
